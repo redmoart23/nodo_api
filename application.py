@@ -37,7 +37,7 @@ keywords_list = []
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--headless')
-driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=chrome_options)
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
 
 def token_required(f):
     @wraps(f)
