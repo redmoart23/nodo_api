@@ -1,0 +1,10 @@
+beautifulsoup4
+newspaper3k
+nltk
+Flask
+python-dotenv==0.21.0
+spacy
+selenium
+scikit-learn
+pandas
+webdriver-manager
