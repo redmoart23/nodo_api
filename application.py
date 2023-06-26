@@ -1,7 +1,6 @@
 from sklearn.feature_extraction.text import TfidfVectorizer 
 from flask import Flask, request, jsonify, render_template
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from dotenv import load_dotenv
 from selenium import webdriver
@@ -36,9 +35,9 @@ images_articles = []
 articles_links=[]
 keywords_list = []
 
-options = webdriver.Options ()
-options.add_argument('--headless')
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--headless')
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
 
 def token_required(f):
     @wraps(f)
