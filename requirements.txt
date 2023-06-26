@@ -7,4 +7,4 @@ spacy
 selenium
 scikit-learn
 pandas
-webdriver-manager
+webdriver_manager
