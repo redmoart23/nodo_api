@@ -35,9 +35,9 @@ images_articles = []
 articles_links=[]
 keywords_list = []
 
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('--headless')
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+# chrome_options = webdriver.ChromeOptions()
+# chrome_options.add_argument('--headless')
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 def token_required(f):
     @wraps(f)
