@@ -1,5 +1,5 @@
 from sklearn.feature_extraction.text import TfidfVectorizer 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from dotenv import load_dotenv
@@ -51,6 +51,9 @@ def token_required(f):
 
     return decorated
 
+@application.route('/')
+def entry():
+    return render_template('index.html')
 
 @application.route('/api/get-articles', methods=['POST'])
 @token_required
