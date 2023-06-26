@@ -39,8 +39,8 @@ keywords_list = []
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--headless')
-driver = webdriver.Chrome(
-    ChromeDriverManager().install(), options=chrome_options)
+chrome_options.binary_location = os.environ["GOOGLE_CHROME_BIN"]
+driver = webdriver.Chrome(executable_path=os.environ["CHROMEDRIVER_PATH"], options=chrome_options)
 
 
 def token_required(f):
