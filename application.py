@@ -37,10 +37,7 @@ keywords_list = []
 
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
-options.add_argument('--no-sandbox')
-options.add_argument('--disable-dev-shm-usage')
-#driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
-driver = webdriver.Chrome(options=options)
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 
 def token_required(f):
     @wraps(f)
